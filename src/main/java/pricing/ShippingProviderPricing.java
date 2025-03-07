@@ -1,3 +1,5 @@
+package pricing;
+
 /**
  * Stores pricing information for a shipping provider based on package size.
  */

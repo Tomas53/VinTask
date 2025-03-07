@@ -1,13 +1,16 @@
+package shipmentModel;
+
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.Test;
 
 public class ShipmentTest {
 
     /**
-     * Tests that the Shipment constructor correctly initializes properties
+     * Tests that the ShipmentModel.Shipment constructor correctly initializes properties
      * and that getter methods return the expected values.
-     * Verifies properties inherited from BasicShipment as well as
-     * the size property specific to Shipment.
+     * Verifies properties inherited from ShipmentModel.BasicShipment as well as
+     * the size property specific to ShipmentModel.Shipment.
      */
     @Test
     public void testConstructorAndGetters() {

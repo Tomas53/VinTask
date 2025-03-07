@@ -1,3 +1,5 @@
+package shipmentModel;
+
 /**
  * Represents a basic shipment with date and shipping provider information.
  * Serves as a base class for more specialized shipment types.

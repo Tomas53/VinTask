@@ -1,3 +1,8 @@
+package inputAndOutput;
+
+import shipmentModel.BasicShipment;
+import shipmentModel.Shipment;
+
 /**
  * Formats shipment results with pricing and discount information.
  * Provides string representation for output.

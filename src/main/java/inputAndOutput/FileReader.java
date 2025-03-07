@@ -1,3 +1,8 @@
+package inputAndOutput;
+
+import shipmentModel.BasicShipment;
+import shipmentModel.Shipment;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -29,10 +34,10 @@ public class FileReader {
 
     /**
      * Creates shipment objects from lines of text.
-     * Handles both BasicShipment (2 parts) and Shipment (3 parts) formats.
+     * Handles both ShipmentModel.BasicShipment (2 parts) and ShipmentModel.Shipment (3 parts) formats.
      *
      * @param lines List of strings, each representing a shipment
-     * @return List of BasicShipment objects (including Shipment objects)
+     * @return List of ShipmentModel.BasicShipment objects (including ShipmentModel.Shipment objects)
      */
     public List<BasicShipment> createShipments(List<String> lines) {
         List<BasicShipment> shipments = new ArrayList<>();

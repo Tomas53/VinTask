@@ -1,4 +1,9 @@
+package inputAndOutput;
+
 import static org.junit.jupiter.api.Assertions.*;
+
+import shipmentModel.BasicShipment;
+import shipmentModel.Shipment;
 import org.junit.Test;
 
 public class ShipmentResultFormatterTest {

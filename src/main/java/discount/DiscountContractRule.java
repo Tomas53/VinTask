@@ -1,3 +1,7 @@
+package discount;
+
+import shipmentModel.Shipment;
+
 /**
  * Interface defining contract rules for calculating shipment discounts.
  * Allows for flexible addition and modification of discount rules.

@@ -1,3 +1,5 @@
+package discount;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -19,7 +21,7 @@ public class DiscountStateTracker {
      *
      * @param discountLimit Maximum discount amount allowed per month
      */
-    DiscountStateTracker(double discountLimit) {
+    public DiscountStateTracker(double discountLimit) {
         this.discountLimit = discountLimit;
     }
 

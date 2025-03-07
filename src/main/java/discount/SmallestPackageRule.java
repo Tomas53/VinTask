@@ -1,10 +1,15 @@
+package discount;
+
+import pricing.ShipmentPriceProvider;
+import shipmentModel.Shipment;
+
 import java.util.Optional;
 
 /**
  * Discount rule that makes all small package shipments match the lowest
  * price available for small packages across all providers.
  */
-public class SmallestPackageRule implements DiscountContractRule{
+public class SmallestPackageRule implements DiscountContractRule {
     private ShipmentPriceProvider shipmentPriceProvider;
 
     /**
@@ -19,7 +24,7 @@ public class SmallestPackageRule implements DiscountContractRule{
     /**
      * Rule applies only to small packages.
      *
-     * @param shipment Shipment to check
+     * @param shipment ShipmentModel.Shipment to check
      * @return true for small packages, false otherwise
      */
     @Override

@@ -1,10 +1,12 @@
+package shipmentModel;
+
 import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class BasicShipmentTest {
 
     /**
-     * Tests that the BasicShipment constructor correctly initializes properties
+     * Tests that the ShipmentModel.BasicShipment constructor correctly initializes properties
      * and that getter methods return the expected values.
      */
     @Test

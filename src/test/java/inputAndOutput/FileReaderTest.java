@@ -1,5 +1,9 @@
+package inputAndOutput;
+
 import static org.junit.jupiter.api.Assertions.*;
 
+import shipmentModel.BasicShipment;
+import shipmentModel.Shipment;
 import org.junit.Test;
 import org.junit.Before;
 import java.util.Arrays;
@@ -42,8 +46,8 @@ public class FileReaderTest {
      * Tests that createShipments method correctly parses different line formats
      * and creates appropriate shipment objects.
      * Verifies:
-     * - Lines with 3 parts create Shipment objects
-     * - Lines with 2 parts create BasicShipment objects
+     * - Lines with 3 parts create ShipmentModel.Shipment objects
+     * - Lines with 2 parts create ShipmentModel.BasicShipment objects
      * - Properties are correctly set in the created objects
      */
     @Test

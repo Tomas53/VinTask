@@ -1,3 +1,9 @@
+package service;
+
+import discount.ShipmentDiscountCalculator;
+import inputAndOutput.ShipmentResultFormatter;
+import shipmentModel.BasicShipment;
+
 import java.util.ArrayList;
 import java.util.List;
 

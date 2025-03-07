@@ -1,12 +1,16 @@
+package discount;
+
+import shipmentModel.Shipment;
+
 /**
  * Discount rule that makes the third large LP shipment in a calendar month free.
  * The free shipment is applied only once per month.
  */
-public class ThirdLargeLPFreeRule implements DiscountContractRule{
+public class ThirdLargeLPFreeRule implements DiscountContractRule {
     /**
      * Rule applies only to large LP shipments.
      *
-     * @param shipment Shipment to check
+     * @param shipment ShipmentModel.Shipment to check
      * @return true for large LP shipments, false otherwise
      */
     @Override

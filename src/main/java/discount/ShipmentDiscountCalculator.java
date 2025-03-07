@@ -1,3 +1,10 @@
+package discount;
+
+import inputAndOutput.ShipmentResultFormatter;
+import pricing.ShipmentPriceProvider;
+import shipmentModel.BasicShipment;
+import shipmentModel.Shipment;
+
 import java.util.List;
 
 /**
@@ -30,7 +37,7 @@ public class ShipmentDiscountCalculator {
      * @return Formatted result with original price, final price, and discount
      */
     public ShipmentResultFormatter calculateDiscount(BasicShipment basicShipment) {
-        // Only process Shipment objects with size information
+        // Only process ShipmentModel.Shipment objects with size information
         if (!(basicShipment instanceof Shipment)) {
             return new ShipmentResultFormatter(basicShipment, 0, 0, 0);
         }

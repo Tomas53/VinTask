@@ -1,4 +1,8 @@
+package discount;
+
 import static org.junit.jupiter.api.Assertions.*;
+
+import shipmentModel.Shipment;
 import org.junit.Test;
 
 public class ThirdLargeLPFreeRuleTest {
