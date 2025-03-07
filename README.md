@@ -104,4 +104,5 @@ Applies discount rules to products and calculates the final discount amount.
 
 ### ShipmentManager
 Manages the process of handling shipments and applying discounts.
+
 ![image](https://github.com/user-attachments/assets/3340c622-b8a3-486d-96b0-fa085828a6a2)
