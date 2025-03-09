@@ -2,7 +2,7 @@
 # VinTask - Shipment Discount Calculator
 
 ## Overview
-VinTask is a Java application for managing shipments and calculating discounts based on various rules and conditions. The application allows for flexible discount strategies and tracks monthly discount limits.
+VinTask is a Java application for managing shipments and calculating discounts based on various rules and conditions. The application allows for flexible discountRules strategies and tracks monthly discountRules limits.
 
 ## Prerequisites
 - Java JDK 11 or higher
@@ -91,16 +91,16 @@ VinTask/
 Classes representing shipment products with properties like size, provider, and date.
 
 ### DiscountContractRule
-Interface that defines the contract for discount rules. Different rule implementations determine how discounts are calculated.
+Interface that defines the contract for discountRules rules. Different rule implementations determine how discounts are calculated.
 
 ### DiscountStateTracker
-Tracks the monthly discount usage to enforce discount caps.
+Tracks the monthly discountRules usage to enforce discountRules caps.
 
 ### ShipmentPriceService
 Provides pricing information for different shipping providers and package sizes.
 
 ### ShipmentDiscountCalculator
-Applies discount rules to products and calculates the final discount amount.
+Applies discountRules rules to products and calculates the final discountRules amount.
 
 ### ShipmentManager
 Manages the process of handling shipments and applying discounts.

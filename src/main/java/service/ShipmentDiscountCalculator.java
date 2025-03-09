@@ -1,7 +1,6 @@
-package discount;
+package service;
 
 import inputAndOutput.ShipmentResultFormatter;
-import pricing.ShipmentPriceProvider;
 import shipmentModel.BasicShipment;
 import shipmentModel.Shipment;
 
@@ -37,7 +36,7 @@ public class ShipmentDiscountCalculator {
      * @return Formatted result with original price, final price, and discount
      */
     public ShipmentResultFormatter calculateDiscount(BasicShipment basicShipment) {
-        // Only process ShipmentModel.Shipment objects with size information
+        // Only process Shipment objects with size information
         if (!(basicShipment instanceof Shipment)) {
             return new ShipmentResultFormatter(basicShipment, 0, 0, 0);
         }
@@ -52,6 +51,12 @@ public class ShipmentDiscountCalculator {
 
         // Extract month from date (YYYY-MM)
         String month = sizedShipment.getDate().substring(0, 7);
+        double remainingMonthlyDiscount = discountStateTracker.getRemainingDiscount(month);
+
+        // If no discount remaining for the month, return original price
+        if (remainingMonthlyDiscount <= 0) {
+            return new ShipmentResultFormatter(basicShipment, originalPrice, originalPrice, 0);
+        }
 
         // Apply all applicable discount rules
         double totalDiscount = 0;
@@ -60,9 +65,9 @@ public class ShipmentDiscountCalculator {
                 double ruleDiscount = rule.calculateDiscount(sizedShipment, originalPrice, discountStateTracker);
 
                 // Enforce monthly discount limit
-                double remainingMonthlyDiscount = discountStateTracker.getRemainingDiscount(month);
                 if (totalDiscount + ruleDiscount > remainingMonthlyDiscount) {
-                    totalDiscount = remainingMonthlyDiscount;
+                    ruleDiscount = remainingMonthlyDiscount - totalDiscount;
+                    totalDiscount += ruleDiscount;
                     break;
                 } else {
                     totalDiscount += ruleDiscount;

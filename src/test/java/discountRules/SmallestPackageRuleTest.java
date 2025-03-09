@@ -1,8 +1,9 @@
-package discount;
+package discountRules;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import pricing.ShipmentPriceProvider;
+import service.DiscountStateTracker;
+import service.ShipmentPriceProvider;
 import shipmentModel.Shipment;
 import org.junit.Test;
 import java.util.Optional;
@@ -50,7 +51,7 @@ public class SmallestPackageRuleTest {
     }
 
     /**
-     * Mock implementation of pricing.ShipmentPriceProvider for testing.
+     * Mock implementation of service.ShipmentPriceProvider for testing.
      */
     private static class MockPriceProvider implements ShipmentPriceProvider {
         @Override

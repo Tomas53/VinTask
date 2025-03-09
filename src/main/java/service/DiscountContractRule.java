@@ -1,4 +1,4 @@
-package discount;
+package service;
 
 import shipmentModel.Shipment;
 

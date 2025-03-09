@@ -1,6 +1,8 @@
-package discount;
+package discountRules;
 
-import pricing.ShipmentPriceProvider;
+import service.DiscountContractRule;
+import service.DiscountStateTracker;
+import service.ShipmentPriceProvider;
 import shipmentModel.Shipment;
 
 import java.util.Optional;
@@ -10,7 +12,7 @@ import java.util.Optional;
  * price available for small packages across all providers.
  */
 public class SmallestPackageRule implements DiscountContractRule {
-    private ShipmentPriceProvider shipmentPriceProvider;
+    private final ShipmentPriceProvider shipmentPriceProvider;
 
     /**
      * Creates a new rule with the specified price provider.
@@ -24,7 +26,7 @@ public class SmallestPackageRule implements DiscountContractRule {
     /**
      * Rule applies only to small packages.
      *
-     * @param shipment ShipmentModel.Shipment to check
+     * @param shipment Shipment to check
      * @return true for small packages, false otherwise
      */
     @Override
@@ -37,11 +39,11 @@ public class SmallestPackageRule implements DiscountContractRule {
      *
      * @param shipment Small package shipment
      * @param originalPrice Original price of the shipment
-     * @param monthlyTracker Discount state tracker
+     * @param discountStateTracker Discount state tracker
      * @return Discount amount (difference between original and lowest price)
      */
     @Override
-    public double calculateDiscount(Shipment shipment, double originalPrice, DiscountStateTracker monthlyTracker) {
+    public double calculateDiscount(Shipment shipment, double originalPrice, DiscountStateTracker discountStateTracker) {
         Optional<Double> lowestPriceOpt = shipmentPriceProvider.getLowestPrice("S");
 
         if (lowestPriceOpt.isPresent()) {

@@ -1,4 +1,4 @@
-package pricing;
+package service;
 
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.Test;

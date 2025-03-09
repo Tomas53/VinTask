@@ -1,9 +1,8 @@
-package discount;
+package service;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import inputAndOutput.ShipmentResultFormatter;
-import pricing.ShipmentPriceProvider;
 import shipmentModel.BasicShipment;
 import shipmentModel.Shipment;
 import org.junit.Test;
@@ -99,7 +98,7 @@ public class ShipmentDiscountCalculatorTest {
     }
 
     /**
-     * Mock implementation of pricing.ShipmentPriceProvider for testing.
+     * Mock implementation of ShipmentPriceProvider for testing.
      * Returns fixed values for prices.
      */
     private static class MockPriceProvider implements ShipmentPriceProvider {
@@ -115,7 +114,7 @@ public class ShipmentDiscountCalculatorTest {
     }
 
     /**
-     * Mock implementation of discount.DiscountContractRule for testing.
+     * Mock implementation of DiscountContractRule for testing.
      * Can be configured to apply or not apply, and returns a fixed discount.
      */
     private static class MockDiscountRule implements DiscountContractRule {

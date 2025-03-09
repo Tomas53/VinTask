@@ -1,5 +1,7 @@
-package discount;
+package discountRules;
 
+import service.DiscountContractRule;
+import service.DiscountStateTracker;
 import shipmentModel.Shipment;
 
 /**

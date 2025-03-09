@@ -1,4 +1,4 @@
-package pricing;
+package service;
 
 /**
  * Stores pricing information for a shipping provider based on package size.

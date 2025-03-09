@@ -1,8 +1,6 @@
-import discount.*;
+import discountRules.*;
 import inputAndOutput.FileReader;
-import pricing.ShipmentPriceService;
-import pricing.ShippingProviderPricing;
-import service.ShipmentManager;
+import service.*;
 import shipmentModel.BasicShipment;
 
 import java.util.ArrayList;

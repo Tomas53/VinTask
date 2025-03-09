@@ -1,4 +1,4 @@
-package pricing;
+package service;
 
 import org.junit.Test;
 
@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
 public class ShippingProviderPricingTest {
 
     /**
-     * Tests that the pricing.ShippingProviderPricing constructor correctly initializes
+     * Tests that the ShippingProviderPricing constructor correctly initializes
      * prices for different package sizes and that getter methods
      * return the expected values.
      */

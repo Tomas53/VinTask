@@ -2,7 +2,6 @@ package service;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import discount.ShipmentDiscountCalculator;
 import inputAndOutput.ShipmentResultFormatter;
 import shipmentModel.BasicShipment;
 import shipmentModel.Shipment;
@@ -36,7 +35,7 @@ public class ShipmentManagerTest {
     }
 
     /**
-     * Mock implementation of discount.ShipmentDiscountCalculator for testing.
+     * Mock implementation of ShipmentDiscountCalculator for testing.
      * Always returns a MockResultFormatter object.
      */
     private static class MockDiscountCalculator extends ShipmentDiscountCalculator {
@@ -51,7 +50,7 @@ public class ShipmentManagerTest {
     }
 
     /**
-     * Mock implementation of inputAndOutput.ShipmentResultFormatter for testing.
+     * Mock implementation of ShipmentResultFormatter for testing.
      * Always returns "Mock Result" from toString().
      */
     private static class MockResultFormatter extends ShipmentResultFormatter {

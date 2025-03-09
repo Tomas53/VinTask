@@ -1,6 +1,5 @@
 package service;
 
-import discount.ShipmentDiscountCalculator;
 import inputAndOutput.ShipmentResultFormatter;
 import shipmentModel.BasicShipment;
 

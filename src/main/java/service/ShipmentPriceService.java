@@ -1,4 +1,4 @@
-package pricing;
+package service;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -7,10 +7,10 @@ import java.util.Optional;
 /**
  * Service for managing shipping provider prices and retrieving
  * prices based on provider and package size.
- * Implements pricing.ShipmentPriceProvider interface.
+ * Implements ShipmentPriceProvider interface.
  */
 public class ShipmentPriceService implements ShipmentPriceProvider {
-    private Map<String, ShippingProviderPricing> providerPrices = new HashMap<>();
+    private final Map<String, ShippingProviderPricing> providerPrices = new HashMap<>();
 
     public ShipmentPriceService() {
     }
@@ -40,16 +40,20 @@ public class ShipmentPriceService implements ShipmentPriceProvider {
      *
      * @param provider Provider code
      * @param size Package size code
-     * @return Price for the specified provider and size
+     * @return Price for the specified provider and size, or -1 for invalid size/provider
      */
     @Override
     public double getPrice(String provider, String size) {
         ShippingProviderPricing shippingProviderPricing = providerPrices.get(provider);
-        switch (size){
+        if (shippingProviderPricing == null) {
+            return -1; // Invalid provider
+        }
+
+        switch (size) {
             case "L": return shippingProviderPricing.getLarge();
             case "M": return shippingProviderPricing.getMedium();
             case "S": return shippingProviderPricing.getSmall();
-            default: return 0;
+            default: return -1; // Invalid size
         }
     }
 
